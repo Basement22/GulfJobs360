@@ -83,7 +83,7 @@ export default function ThirdBox() {
               Start for free, and scale as you go
             </Typography>
             <Typography component="h3" variant="h3" className={classes.text}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy.
             </Typography>
             <Button
