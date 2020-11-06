@@ -1,10 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import CodeIcon from "@material-ui/icons/Code";
 import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
 import BubbleChartOutlinedIcon from "@material-ui/icons/BubbleChartOutlined";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -120,69 +122,40 @@ export default function FourthBox() {
       <Grid container spacing={0} direction="column" alignItems="center" >
         <Grid item xs={10} sm={7}>
           <div className={classes.paper1}>
-            <Typography component="h1" variant="h2" className={classes.heading}>
-              Why GulfJobs. 360?
-            </Typography>
-            <Typography component="h3" variant="h3" className={classes.text}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-            </Typography>
+            Recent Jobs
           </div>
         </Grid>
         <Grid item xs={12}>
-          <Grid container className={classes.cardsgrid} spacing={0}>
-            <Grid item xs={12}>
-              <Grid container justify="center" spacing={10}>
-                <Grid item>
-                  <div className={classes.paper2}>
-                    <CodeIcon className={classes.code} />
-                    <Typography variant="h4" className={classes.title}>
-                      Find your 
-                      dream Job
-                    </Typography>
-                    <Typography
-                      component="h6"
-                      variant="h6"
-                      className={classes.body}
-                    >
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-                    </Typography>
-                  </div>
-                </Grid>
-                <Grid item>
-                  <div className={classes.paper3}>
-                    <FileCopyOutlinedIcon className={classes.file} />
-                    <Typography variant="h4" className={classes.title}>
-                      Manage Jobs &
-                      Browse
-                      Candidate
-                    </Typography>
-                    <Typography
-                      component="h6"
-                      variant="h6"
-                      className={classes.body}
-                    >
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-                    </Typography>
-                  </div>
-                </Grid>
-                <Grid item>
-                  <div className={classes.paper4}>
-                    <BubbleChartOutlinedIcon className={classes.chart} />
-                    <Typography variant="h4" className={classes.title}>
-                      Career Tips
-                    </Typography>
-                    <Typography
-                      component="h6"
-                      variant="h6"
-                      className={classes.body}
-                    >
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-                    </Typography>
-                  </div>
-                </Grid>
+          <Grid container spacing={2}>
+          <Grid item>
+            <ButtonBase className={classes.image}>
+              <img className={classes.img} alt="complex" src="/static/images/grid/complex.jpg" />
+            </ButtonBase>
+          </Grid>
+          <Grid item xs={12} sm container>
+            <Grid item xs container direction="column" spacing={2}>
+              <Grid item xs>
+                <Typography gutterBottom variant="subtitle1">
+                  Part Time
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  ACB Product Sales Specialist
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  Mencap Co
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                  Brooklyn, NY USA
+                </Typography>
               </Grid>
             </Grid>
+            <Grid item>
+              <Typography variant="subtitle1">$19.00</Typography>
+            </Grid>
           </Grid>
+        </Grid>
         </Grid>
       </Grid>
     </div>

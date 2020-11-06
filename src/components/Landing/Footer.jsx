@@ -12,8 +12,8 @@ import { assets } from '../../theme'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // backgroundColor: '#fff',
-    backgroundColor: '#0E4B7A',
+    paddingTop: '50px',
+    backgroundColor: '#252834',
   },
   paper1: {
     paddingTop: '50px',
@@ -62,13 +62,13 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: "16px",
     fontWeight: "600",
-    color: "#87D4D6",
+    color: "#13B493",
     marginBottom: "15px"
   },
   listItem: {
     "&:hover": {
       backgroundColor: "transparent",
-      color: "#87D4D6"
+      color: "#13B493"
     },
     textAlign: "left",
     padding: "0px",
@@ -133,15 +133,15 @@ export default function Footer() {
   return (
     <div className={classes.root}>
       <Grid container spacing={0}>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <div className={classes.paper1}>
             <h1 style={{ color: '#17CCA3' }}>360.</h1>
           </div>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} sm={6} md={3}>
           <div className={classes.paper2}>
             <Typography component="h6" variant="h6" className={classes.title}>
-              Company
+              Quik Links
             </Typography>
             <List className={classes.list}>
               <ListItem
@@ -150,7 +150,7 @@ export default function Footer() {
                 className={classes.listItem}
               >
                 <ListItemText
-                  primary="About us"
+                  primary="Job Packages"
                   style={{ marginLeft: "0px" }}
                 />
               </ListItem>
@@ -159,21 +159,28 @@ export default function Footer() {
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Contact us" />
+                <ListItemText primary="Post New Job" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Terms" />
+                <ListItemText primary="Jobs Listing" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Privacy" />
+                <ListItemText primary="Jobs Style Grid" />
+              </ListItem>
+              <ListItem
+                button
+                disableRipple={true}
+                className={classes.listItem}
+              >
+                <ListItemText primary="Employers Listing" />
               </ListItem>
             </List>
           </div>
@@ -181,7 +188,7 @@ export default function Footer() {
         <Grid item xs={12} sm={6} md={3}>
           <div className={classes.paper3}>
             <Typography component="h6" variant="h6" className={classes.title}>
-              Key Concepts
+              For Candidates
             </Typography>
             <List className={classes.list}>
               <ListItem
@@ -190,7 +197,7 @@ export default function Footer() {
                 className={classes.listItem}
               >
                 <ListItemText
-                  primary="GulfJobs. 360 & Efficency"
+                  primary="User Dashboard"
                   style={{ marginLeft: "0px" }}
                 />
               </ListItem>
@@ -199,14 +206,21 @@ export default function Footer() {
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Management & Browse Candidate" />
+                <ListItemText primary="CV Packages" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Personal Growth" />
+                <ListItemText primary="Candidate Listing" />
+              </ListItem>
+              <ListItem
+                button
+                disableRipple={true}
+                className={classes.listItem}
+              >
+                <ListItemText primary="Candidates Grid" />
               </ListItem>
             </List>
           </div>
@@ -214,7 +228,7 @@ export default function Footer() {
         <Grid item xs={12} sm={6} md={3}>
           <div className={classes.paper4}>
             <Typography component="h6" variant="h6" className={classes.title}>
-              Products
+              For Employers
             </Typography>
             <List className={classes.list}>
               <ListItem
@@ -223,7 +237,7 @@ export default function Footer() {
                 className={classes.listItem}
               >
                 <ListItemText
-                  primary="Why GulfJobs. 360?"
+                  primary="Post New"
                   style={{ marginLeft: "0px" }}
                 />
               </ListItem>
@@ -232,28 +246,28 @@ export default function Footer() {
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="What is GulfJobs. 360?" />
+                <ListItemText primary="Job Employer Listing" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Features" />
+                <ListItemText primary="Employers Grid" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Services" />
+                <ListItemText primary="Job Packages" />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="FAQs" />
+                <ListItemText primary="Job Listing" />
               </ListItem>
             </List>
           </div>
@@ -261,7 +275,7 @@ export default function Footer() {
         <Grid item xs={12} sm={6} md={3}>
           <div className={classes.paper5}>
             <Typography component="h6" variant="h6" className={classes.title}>
-              Resources
+              Newsletter
             </Typography>
             <List className={classes.list}>
               <ListItem
@@ -305,7 +319,7 @@ export default function Footer() {
         </Grid>
         <Grid item md={4}>
           <div className={classes.paper7}>
-            <h1 style={{ color: '#EDF3F3', marginTop: '9px' }}>GulfJobs. <b style={{ color: '#17CCA3' }}>360</b></h1>
+            <h1 style={{ color: '#13B493', marginTop: '9px' }}>GulfJobs. <b style={{ color: '#FFFFFF' }}>360</b></h1>
           </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>

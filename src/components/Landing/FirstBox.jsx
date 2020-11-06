@@ -1,10 +1,25 @@
 import React from 'react';
+
+import clsx from "clsx";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import SearchOutlined from "@material-ui/icons/SearchOutlined";
+import LocationOnOutlined from "@material-ui/icons/LocationOnOutlined";
+import MyLocation from "@material-ui/icons/MyLocation";
+import Visibility from "@material-ui/icons/Visibility";
+import IconButton from "@material-ui/core/IconButton";
+import FormControl from "@material-ui/core/FormControl";
+import Input from "@material-ui/core/Input";
+import InputAdornment from "@material-ui/core/InputAdornment";
+// import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
+
 
 import { assets } from '../../theme'
+import { InputBase } from '@material-ui/core';
+// import { MyLocation } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,11 +36,15 @@ const useStyles = makeStyles((theme) => ({
             height: 'auto',
         },
         overflow: 'hidden',
-        backgroundColor: '#EDF3F3'
-        // backgroundImage: "linear-gradient(#EDF3F3, #EDF3F3, #EDF3F3, #FFFFFF)",
+        backgroundColor: '',
+        backgroundImage: "linear-gradient(to right, #13B493, #13B493, #13b49488, #13b4945d)",
+    },
+    leftgrid: {
+        // backgroundColor: '#13B493',
     },
     paper1: {
         paddingTop: '70px',
+        height: '100vh',
         marginLeft: '10vw',
         padding: theme.spacing(0),
         textAlign: 'left',
@@ -45,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '54px',
         marginTop: '12vh',
         fontWeight: '700',
+        color: 'white',
         [theme.breakpoints.down("xs")]: {
             fontSize: '38px',
             marginTop: '8vh',
@@ -54,7 +74,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     text: {
-        fontSize: '28px',
+        fontSize: '20px',
+        color: 'white',
         [theme.breakpoints.down("xs")]: {
             fontSize: '22px',
         },
@@ -71,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     },
     getstarted: {
         color: 'white',
-        marginTop: '50px',
+        // marginTop: '50px',
         [theme.breakpoints.down("xs")]: {
             fontSize: '22px',
         },
@@ -86,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
     paper2: {
         textAlign: 'left',
         height: `calc(92vh)`,
+        backgroundColor: '#13B493',
         marginTop: '70px',
         width: '100%',
         color: theme.palette.text.secondary,
@@ -101,6 +123,40 @@ const useStyles = makeStyles((theme) => ({
             textAlign: 'center',
             height: 'auto',
         },
+    },
+    // searchbox: {
+    //     width: '100%',
+    //     backgroundColor: 'white',
+    // },
+    searchform: {
+        backgroundColor: 'white',
+        display: 'flex',
+        borderRadius: '8px',
+        height: '70px',
+        // width: '80vw',
+        marginTop: '10vh',
+        padding: '14px',
+        zIndex: '1',
+        position: 'absolute',
+        flexDirection: 'row',
+    },
+    body: {
+        fontSize: '16px',
+        color: 'white',
+        [theme.breakpoints.down("xs")]: {
+            fontSize: '22px',
+        },
+        [theme.breakpoints.down("380")]: {
+            fontSize: '18px',
+        },
+        [theme.breakpoints.down("1180")]: {
+            fontSize: '26px',
+        },
+        [theme.breakpoints.down("1005")]: {
+            fontSize: '24px',
+        },
+        // position: 'absolute',
+        marginTop: '25vh',
     },
     working: {
         marginTop: '10vh',
@@ -127,14 +183,22 @@ const useStyles = makeStyles((theme) => ({
             width: '80vw',
         },
     },
+    // margin: {
+    //     margin: theme.spacing(1),
+    // },
+    // textField: {
+    //     width: '25ch',
+    // },
     paper3: {
         textAlign: 'left',
         height: '92vh',
         marginTop: '70px',
+        opacity: '0.4',
+        // backgroundColor: 'orange',
         width: '100%',
         color: theme.palette.text.secondary,
         [theme.breakpoints.up("md")]: {
-            backgroundImage: `url(${assets.testworking})`,
+            backgroundImage: `url(${assets.job})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%',
             height: '80vh',
@@ -157,18 +221,61 @@ export default function FullWidthGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={0} >
-                <Grid item xs={12} sm={12} md={6}>
+                <Grid item xs={12} sm={12} md={6} className={classes.leftgrid} >
                     <div className={classes.paper1}>
                         <Typography component='h1' variant='h2' className={classes.heading} >
                             Find Your Next Job, <br />
                             That Suits You Best.
                         </Typography>
                         <Typography component='h3' variant='h3' className={classes.text} >
-                            The platform where you can manage <br />
-                            and post new jobs, and where <br />
+                            The platform where you can manage
+                            and post new jobs, <br /> and where
                             you can find new jobs.
                         </Typography>
-                        <Button color="secondary" variant="contained" className={classes.getstarted} >Browse Jobs</Button>
+                        <div className={classes.searchbox} >
+                            <FormControl className={classes.searchform}>
+                                {/* <InputLabel htmlFor="standard-adornment-password">Password</InputLabel> */}
+                                <InputBase
+                                    id="input-with-icon-adornment"
+                                    placeholder="Job Title"
+                                    // style={{padding: '20px'}}
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                            <SearchOutlined style={{ color: 'grey', fontSize: '30px' }} />
+                                        </InputAdornment>
+                                    }
+                                />
+                                <InputBase
+                                    id="location-text"
+                                    // type={values.showPassword ? 'text' : 'password'}
+                                    type="text"
+                                    placeholder="Location"
+                                    // value={values.password}
+                                    // onChange={handleChange('password')}
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                            <LocationOnOutlined style={{ color: 'grey', fontSize: '30px' }} />
+                                        </InputAdornment>
+                                    }
+                                    endAdornment={
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                aria-label="toggle password visibility"
+                                            // onClick={handleClickShowPassword}
+                                            // onMouseDown={handleMouseDownPassword}
+                                            >
+                                                {/* {values.showPassword ? <Visibility /> : <VisibilityOff />} */}
+                                                <MyLocation />
+                                            </IconButton>
+                                        </InputAdornment>
+                                    }
+                                />
+                                <Button color="primary" variant="contained" className={classes.getstarted} >Browse Jobs</Button>
+                            </FormControl>
+                        </div>
+                        <Typography component='h6' variant='h6' className={classes.body} >
+                            Trending Keywords: Designer, Developer, Parmacist, Engineer
+                        </Typography>
                     </div>
                     <div className={classes.paper2}>
                         <img src={assets.working} alt="sorry!" className={classes.working} />

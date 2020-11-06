@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
       width: '72%',
     },
     flexDirection: "row",
-    width: "52%",
+    width: "60%",
     maxWidth: 500,
   },
   login: {
@@ -134,8 +134,20 @@ const useStyles = makeStyles((theme) => ({
     color: '#3D3D3D',
     padding: "0px",
     paddingLeft: '0px',
+    fontSize: '50px',
     paddingRight: '0px',
-    marginLeft: "5px",
+    marginLeft: "17px",
+    backgroundColor: "none",
+    textAlign: "center"
+  },
+  listItemText: {
+    "&:hover": {
+      color: '#13B493',
+      backgroundColor: "transparent"
+    },
+    color: '#3D3D3D',
+    padding: "0px",
+    marginLeft: "0px",
     backgroundColor: "none",
     textAlign: "center"
   }
@@ -167,7 +179,7 @@ export default function Header() {
       >
         <Toolbar>
           <div className={classes.logoicon}>
-          <h1 style={{color: '#0E4B7A'}}>GulfJobs. <b style={{color: '#17CCA3'}}>360</b></h1>
+          <h1 style={{color: '#252834'}}>GulfJobs. <b style={{color: '#13B493'}}>360</b></h1>
           </div>
           <div className={classes.listmenu}>
             <List
@@ -177,35 +189,49 @@ export default function Header() {
             >
               <ListItem
                 button
+                component={Link}
                 disableRipple={true}
+                to="/"
                 style={{ marginLeft: "0px" }}
                 className={classes.listItem}
-                autoFocus={false}
               >
-                <ListItemText primary="Jobs" />
+                <ListItemText primary="Home" className={classes.listItemText} />
               </ListItem>
               <ListItem
                 button
                 component={Link}
-                to="/docs"
+                to="/jobs"
                 disableRipple={true}
                 className={classes.listItem}
               >
-                <ListItemText primary="Services" />
+                <ListItemText primary="Jobs" className={classes.listItemText} />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
+                to="/employers"
+                component={Link}
                 className={classes.listItem}
               >
-                <ListItemText primary="Tips" />
+                <ListItemText primary="Employers" className={classes.listItemText} />
               </ListItem>
               <ListItem
                 button
                 disableRipple={true}
+                to="/candidates"
+                component={Link}
                 className={classes.listItem}
               >
-                <ListItemText primary="Post Jobs" />
+                <ListItemText primary="Candidates" className={classes.listItemText} />
+              </ListItem>
+              <ListItem
+                button
+                disableRipple={true}
+                to="/pages"
+                component={Link}
+                className={classes.listItem}
+              >
+                <ListItemText primary="Pages" className={classes.listItemText} />
               </ListItem>
             </List>
           </div>

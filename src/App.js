@@ -4,16 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#0E4B7A',
-      dark: '#17CCA3',
+      main: '#252834',
+      light: "#575858",
+      dark: '#575858',
     },
     secondary: {
-      main: '#17CCA3',
-      light: "#18A1E8",
+      main: '#13B493',
+      light: "#DFFFFA",
       dark: "#3D60A7",
       contrastText: '#3F3F3F',
     },
@@ -27,13 +29,13 @@ const theme = createMuiTheme({
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '32px',
       fontWeight: '500',
-      color: '#0E4B7A',
+      color: '#211E1E',
     },
     h2: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '30px',
       fontWeight: '500',
-      color: '#0E4B7A',
+      color: '#211E1E',
     },
     h3: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -57,7 +59,7 @@ const theme = createMuiTheme({
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '16px',
       fontWeight: '500',
-      color: '#075A5D',
+      color: '#FFFFFF',
     },
     title1: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -97,7 +99,8 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <Switch>
-          <Route path="/" component={Home}/>
+          <Route path="/" exact component={Home}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </ThemeProvider>
     </Router>
