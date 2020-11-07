@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: '0px',
-        backgroundImage: "linear-gradient(to bottom right, #0E4B7A, #0E4B7A, #17CCA3, #17CCA3)",
+        backgroundImage: "linear-gradient(to bottom right, #252834, #252834, #13B493, #DFFFFA)",
         // backgroundColor: '#075A5D',
         height: 'auto',
         borderRadius: '5vw 15vw 5vw 0vw',
@@ -114,7 +114,8 @@ export default function FullWidthGrid() {
                             Online Resume. Your resume in minutes with JobBoard resume assistant is ready!
                         </Typography>
                         <Typography component='h3' variant='h3' className={classes.text} >
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                            Search, find and apply for jobs directly on your mobile device or desktop Manage all
+                            of the jobs you have applied to from a convenience secure dashboard.
                         </Typography>
                         <Button color="primary" variant="outlined" className={classes.learnmore} >Learn More</Button>
                     </div>

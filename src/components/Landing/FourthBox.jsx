@@ -7,13 +7,16 @@ import CodeIcon from "@material-ui/icons/Code";
 import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
 import BubbleChartOutlinedIcon from "@material-ui/icons/BubbleChartOutlined";
 
+import { assets } from '../../theme'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     overflow: 'hidden',
-    backgroundColor: "#FFF",
-    backgroundImage: "linear-gradient(#EDF3F3, #F3F3F3, #F3F3F3, #EDF3F3)",
+    backgroundColor: "#FFFFFF",
+  },
+  main: {
+    padding: '30px 7vw 70px 7vw',
   },
   paper1: {
     paddingTop: "3vh",
@@ -21,97 +24,132 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary
   },
   heading: {
-    fontSize: "40px",
-    marginTop: "4vh",
+    fontSize: "32px",
+    marginBottom: '50px',
     fontWeight: "600",
-    color: "#075A5D"
+    color: "#252834"
   },
   text: {
-    color: "#2F2F2F",
+    color: "#575858",
     fontSize: "22px",
     marginTop: "50px",
     marginBottom: "100px"
   },
-  cardsgrid: {
-    // marginRight: '10vw',
-    // marginLeft: '10vw',
-    marginBottom: '180px',
+  jobcards: {
+    marginLeft: '3vw'
   },
-  paper2: {
-    width: 250,
-    height: 325,
-    paddingBottom: '10px',
-    boxShadow: "2px 2px 30px #BEBEBE",
-    [theme.breakpoints.down("750")]: {
-      width: '70vw',
-      height: 'auto'
-    },
-    borderRadius: "8px",
-    paddingTop: "10px",
-    // backgroundColor: "#008AB7"
-  },
-  code: {
-    marginLeft: "15px",
-    width: "60px",
-    height: "60px",
-    color: "#17CCA3"
-  },
-  file: {
-    marginLeft: "15px",
-    width: "40px",
-    height: "55px",
-    color: "#17CCA3"
-  },
-  chart: {
-    marginLeft: "15px",
-    width: "45px",
-    height: "55px",
-    color: "#17CCA3"
-  },
-  title: {
-    color: "#0E4B7A",
-    fontSize: '26px',
-    marginLeft: "20px",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-  },
-  body: {
-    color: "grey",
-    marginLeft: "20px",
-    marginRight: '20px',
+  card: {
+    cursor: 'pointer',
+    border: '1px solid #EAEAEA',
+    padding: '20px',
+    marginLeft: '3vw',
+    borderRadius: '8px',
+    // width: '300px',
     marginBottom: '30px',
-    marginTop: '5px',
-    fontWeight: '200',
-    fontSize: '18px',
-    background: 'transparent',
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-  },
-  paper3: {
-    width: 250,
-    height: 325,
-    paddingBottom: '10px',
-    [theme.breakpoints.down("750")]: {
-      width: '70vw',
-      height: 'auto'
+    "&:hover": {
+      boxShadow: '2px 2px 10px #D7F9F2',
+      border: '1px solid #13B493',
     },
-    paddingTop: "10px",
-    borderRadius: "8px",
-    boxShadow: "2px 2px 30px #BEBEBE",
-    // backgroundColor: "#07485D"
   },
-  paper4: {
-    width: 250,
-    height: 325,
+  image: {
+    width: 128,
+    height: 128,
+  },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  // heading: {
+  //   fontSize: "40px",
+  //   marginTop: "4vh",
+  //   fontWeight: "600",
+  //   color: "#075A5D"
+  // },
+  // text: {
+  //   color: "#2F2F2F",
+  //   fontSize: "22px",
+  //   marginTop: "50px",
+  //   marginBottom: "100px"
+  // },
+  // cardsgrid: {
+  //   // marginRight: '10vw',
+  //   // marginLeft: '10vw',
+  //   marginBottom: '180px',
+  // },
+  // paper2: {
+  //   width: 250,
+  //   height: 325,
+  //   paddingBottom: '10px',
+  //   boxShadow: "2px 2px 30px #BEBEBE",
+  //   [theme.breakpoints.down("750")]: {
+  //     width: '70vw',
+  //     height: 'auto'
+  //   },
+  //   borderRadius: "8px",
+  //   paddingTop: "10px",
+  // },
+  // code: {
+  //   marginLeft: "15px",
+  //   width: "60px",
+  //   height: "60px",
+  //   color: "#17CCA3"
+  // },
+  // file: {
+  //   marginLeft: "15px",
+  //   width: "40px",
+  //   height: "55px",
+  //   color: "#17CCA3"
+  // },
+  // chart: {
+  //   marginLeft: "15px",
+  //   width: "45px",
+  //   height: "55px",
+  //   color: "#17CCA3"
+  // },
+  // title: {
+  //   color: "#0E4B7A",
+  //   fontSize: '26px',
+  //   marginLeft: "20px",
+  //   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+  // },
+  // body: {
+  //   color: "grey",
+  //   marginLeft: "20px",
+  //   marginRight: '20px',
+  //   marginBottom: '30px',
+  //   marginTop: '5px',
+  //   fontWeight: '200',
+  //   fontSize: '18px',
+  //   background: 'transparent',
+  //   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+  // },
+  // paper3: {
+  //   width: 250,
+  //   height: 325,
+  //   paddingBottom: '10px',
+  //   [theme.breakpoints.down("750")]: {
+  //     width: '70vw',
+  //     height: 'auto'
+  //   },
+  //   paddingTop: "10px",
+  //   borderRadius: "8px",
+  //   boxShadow: "2px 2px 30px #BEBEBE",
+  // },
+  // paper4: {
+  //   width: 250,
+  //   height: 325,
 
-    paddingBottom: '10px',
-    [theme.breakpoints.down("750")]: {
-      width: '70vw',
-      height: 'auto'
-    },
-    paddingTop: "10px",
-    borderRadius: "8px",
-    boxShadow: "2px 2px 30px #BEBEBE",
-    // backgroundColor: "#0E6B7E"
-  }
+  //   paddingBottom: '10px',
+  //   [theme.breakpoints.down("750")]: {
+  //     width: '70vw',
+  //     height: 'auto'
+  //   },
+  //   paddingTop: "10px",
+  //   borderRadius: "8px",
+  //   boxShadow: "2px 2px 30px #BEBEBE",
+  // }
 }));
 
 export default function FourthBox() {
@@ -119,43 +157,220 @@ export default function FourthBox() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={0} direction="column" alignItems="center" >
-        <Grid item xs={10} sm={7}>
+      <Grid container spacing={1} className={classes.main} >
+        <Grid item xs={12}>
           <div className={classes.paper1}>
-            Recent Jobs
+            <Typography component="h1" variant="h2" className={classes.heading} >
+              Recent Jobs
+            </Typography>
           </div>
         </Grid>
-        <Grid item xs={12}>
-          <Grid container spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src="/static/images/grid/complex.jpg" />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  Part Time
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  ACB Product Sales Specialist
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  Mencap Co
-                </Typography>
-              </Grid>
+        <Grid container item xs={12} spacing={0} className={classes.jobcards} >
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
               <Grid item>
-                <Typography variant="body2" style={{ cursor: 'pointer' }}>
-                  Brooklyn, NY USA
-                </Typography>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.companylogo2}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Part Time
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      ACB Product Sales Specialist
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Mencap Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      Brooklyn, NY USA
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">$19.00</Typography>
+          </Grid>
+          {/* <Grid item xs={2} style={{width: '20px'}}>
+
+          </Grid> */}
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.flooop}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Freelance
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      General Ledger Accountant
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      NonStopo Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      Flushing, NY USA
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
+        <Grid container item xs={12} spacing={0} className={classes.jobcards} >
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.com}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Internship
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      Finance Manager & Health
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Mencap Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      Flushing, NY USA
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.advo}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Freelance
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      Senior / Staff Nurse
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Shieseido Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      Flushing, NY USA
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid container item xs={12} spacing={0} className={classes.jobcards} >
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.visme}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Full Time
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      Assistant / Store Keeper
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Shieseido Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      Flushing, NY USA
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs={5} className={classes.card} >
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="sorry!"
+                    src={assets.logo}
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      Internship
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      Group Marketing Manager
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      Mencap Co
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: "pointer" }}>
+                      London W1D 7LH, UK
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>

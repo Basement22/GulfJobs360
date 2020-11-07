@@ -23,7 +23,7 @@ export default function PersistentDrawerRight() {
     return (
         <div className={classes.root}>
             <FirstBox />
-            {/* <FourthBox /> */}
+            <FourthBox />
             <HelpBox />
             <Categories />
             <SecondBox />

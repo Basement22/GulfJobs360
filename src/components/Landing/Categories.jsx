@@ -17,8 +17,8 @@ import { assets } from '../../theme'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        backgroundColor: "#FFFFFF",
         paddingTop: '60px',
+        backgroundImage: "linear-gradient(#DFFFFA, #FFFFFF, #FFFFFF, #FFFFFF, #EDF3F3)",
         paddingBottom: '80px',
     },
     paper1: {
@@ -42,130 +42,22 @@ const useStyles = makeStyles((theme) => ({
         boxSizing: 'border-box',
         color: theme.palette.text.secondary
     },
-    cat1: {
+    cat: {
         padding: theme.spacing(1),
         textAlign: "center",
         height: '180px',
         paddingTop: '55px',
         marginBottom: '30px',
         width: '220px',
+        cursor: 'pointer',
+        "&:hover": {
+            boxShadow: '2px 2px 20px grey',
+            color: 'black',
+        },
         backgroundRepeat: 'no-repeat',
         backgroundImage: `url(${assets.bgcat})`,
         backgroundSize: 'cover',
-        boxShadow: '2px 2px 20px grey',
         color: 'white',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat2: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        height: '180px',
-        paddingTop: '55px',
-        backgroundRepeat: 'no-repeat',
-        marginBottom: '30px',
-        backgroundSize: 'cover',
-        boxShadow: '2px 2px 20px grey',
-        width: '220px',
-        backgroundImage: `url(${assets.bgcat})`,
-        color: 'white',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat3: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        height: '180px',
-        paddingTop: '55px',
-        backgroundImage: `url(${assets.bgcat})`,
-        marginBottom: '30px',
-        boxShadow: '2px 2px 20px grey',
-        width: '220px',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        color: 'white',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat4: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        marginBottom: '30px',
-        height: '180px',
-        backgroundImage: `url(${assets.bgcat})`,
-        paddingTop: '55px',
-        boxShadow: '2px 2px 20px grey',
-        color: 'white',
-        backgroundSize: 'cover',
-        width: '220px',
-        backgroundRepeat: 'no-repeat',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat5: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        marginBottom: '30px',
-        boxShadow: '2px 2px 20px grey',
-        height: '180px',
-        paddingTop: '55px',
-        backgroundImage: `url(${assets.bgcat})`,
-        backgroundSize: 'cover',
-        color: 'white',
-        backgroundRepeat: 'no-repeat',
-        width: '220px',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat6: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        marginBottom: '30px',
-        backgroundRepeat: 'no-repeat',
-        backgroundImage: `url(${assets.bgcat})`,
-        backgroundSize: 'cover',
-        height: '180px',
-        paddingTop: '55px',
-        boxShadow: '2px 2px 20px grey',
-        color: 'white',
-        width: '220px',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat7: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        marginBottom: '30px',
-        backgroundRepeat: 'no-repeat',
-        height: '180px',
-        backgroundImage: `url(${assets.bgcat})`,
-        paddingTop: '55px',
-        color: 'white',
-        backgroundSize: 'cover',
-        width: '220px',
-        boxShadow: '2px 2px 20px grey',
-        borderRadius: '8px',
-        backgroundColor: '#13B493',
-        color: theme.palette.text.secondary
-    },
-    cat8: {
-        padding: theme.spacing(1),
-        textAlign: "center",
-        backgroundImage: `url(${assets.bgcat})`,
-        marginBottom: '30px',
-        boxShadow: '2px 2px 20px grey',
-        height: '180px',
-        paddingTop: '55px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        color: 'white',
-        width: '220px',
         borderRadius: '8px',
         backgroundColor: '#13B493',
         color: theme.palette.text.secondary
@@ -242,7 +134,7 @@ export default function FourthBox() {
                     <Grid container item xs={12} spacing={0}>
                         <Grid item xs={3}>
                             <div className={classes.wrap}>
-                                <div className={classes.cat1}>
+                                <div className={classes.cat}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Design & Multimedia
                                     </Typography>
@@ -253,7 +145,7 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat2}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -266,7 +158,7 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat3}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Accounting / Finance
@@ -279,7 +171,7 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat4}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -294,7 +186,7 @@ export default function FourthBox() {
                     </Grid>
                     <Grid container item xs={12} spacing={0}>
                         <Grid item xs={3}>
-                            <div className={classes.cat5}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -307,9 +199,8 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat6}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
-
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Resturant / Food Services
                                 </Typography>
@@ -320,7 +211,7 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat7}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -333,7 +224,7 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat8}>
+                            <div className={classes.cat}>
                                 <div className={classes.wrap}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Health

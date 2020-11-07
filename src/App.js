@@ -5,6 +5,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 const theme = createMuiTheme({
   palette: {
@@ -16,7 +17,7 @@ const theme = createMuiTheme({
     secondary: {
       main: '#13B493',
       light: "#DFFFFA",
-      dark: "#3D60A7",
+      dark: "#12AF8F",
       contrastText: '#3F3F3F',
     },
     text: {
@@ -101,6 +102,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/login" component={Login}/>
+          <Route path="/signup" component={Signup}/>
         </Switch>
       </ThemeProvider>
     </Router>

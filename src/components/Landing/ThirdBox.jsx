@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "40px",
     marginTop: "4vh",
     fontWeight: "600",
-    color: "#0E4B7A"
+    // color: "#0E4B7A"
   },
   text: {
-    color: "#075A5D",
+    color: "#838383",
     fontSize: "22px",
     marginTop: "20px"
   },
