@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { green } from "@material-ui/core/colors";
 
-import {assets} from '../../theme'
+import { assets } from '../../theme'
 
 import GoogleButton from "../Common/GoogleButton";
 
@@ -27,31 +27,31 @@ export default function SignIn(props) {
       <div className={classes.paper}>
         <form className={classes.form} noValidate>
           <Grid item xs={12}>
-              <TextField
-                // variant="filled"
-                margin="normal"
-                color='primary'
-                required
-                fullWidth
-                style={{ marginTop: '0px', marginBottom: '0px' }}
-                size="small"
-                label="Username Or Email "
-                name="usernameOrEmail"
-              />
+            <TextField
+              // variant="filled"
+              margin="normal"
+              color='primary'
+              required
+              fullWidth
+              style={{ marginTop: '0px', marginBottom: '0px' }}
+              size="small"
+              label="Username Or Email "
+              name="usernameOrEmail"
+            />
           </Grid>
           <Grid item xs={12} style={{ marginTop: "30px" }}>
-              <TextField
-                // variant="filled"
-                style={{ marginTop: '0px', marginBottom: '0px' }}
-                margin="normal"
-                size='small'
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                autoComplete="password"
-              />
+            <TextField
+              // variant="filled"
+              style={{ marginTop: '0px', marginBottom: '0px' }}
+              margin="normal"
+              size='small'
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              autoComplete="password"
+            />
 
 
           </Grid>
@@ -79,14 +79,14 @@ export default function SignIn(props) {
           </Button>
           </div>
           <Grid item xs={12} style={{ marginTop: "0px", marginBottom: '0px' }}>
-            <Paper className={classes.paper} style={{ textAlign: 'center', marginTop: '10px', marginBottom: '18px', boxShadow: 'none' }}>
+            <Paper className={classes.paper} style={{ textAlign: 'center', marginTop: '5px', marginBottom: '7px', boxShadow: 'none' }}>
               <Typography component="h1" variant="subtitle1">
                 OR
               </Typography>
             </Paper>
           </Grid>
           <Grid container className={classes.btnContainer} >
-            <Grid item xs={5} >
+            <Grid item xs={4} >
               <Paper className={classes.paper} style={{ textAlign: 'center', boxShadow: 'none' }}>
                 <Button
                   type="button"
@@ -94,28 +94,36 @@ export default function SignIn(props) {
                   variant="contained"
                   className={classes.login1}
                 >
-                  Google
-                  {/* <img src={assets.googleicon} className={classes.gIcon} alt="sorry!"/> */}
+                  <img src={assets.googleicon} className={classes.gIcon} alt="sorry!" />
                 </Button>
               </Paper>
             </Grid>
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={5} >
+            <Grid item xs={4} >
               <Paper className={classes.paper} style={{ textAlign: 'center', boxShadow: 'none' }}>
                 <Button
                   type="button"
                   fullWidth
                   variant="contained"
-                  // color=""
                   className={classes.login2}
                 >
-                  FaceBook
-              </Button>
+                  <img src={assets.facebookicon} className={classes.fIcon} alt="sorry!" />
+                </Button>
+              </Paper>
+            </Grid>
+            <Grid item xs={4} >
+              <Paper className={classes.paper} style={{ textAlign: 'center', boxShadow: 'none' }}>
+                <Button
+                  type="button"
+                  fullWidth
+                  variant="contained"
+                  className={classes.login3}
+                >
+                  <img src={assets.linkedinicon} className={classes.inIcon} alt="sorry!" />
+                </Button>
               </Paper>
             </Grid>
           </Grid>
+
           <Grid item style={{ textAlign: 'right', position: 'absolute', top: '93vh' }} >
             <Link to="/signup" className={classes.signupLink} >
               {"Don't have an account? Sign Up"}
@@ -157,30 +165,60 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2, 0, 2),
   },
   login1: {
-    border: '1px solid #ADADAD',
-    padding: theme.spacing(1.5, 0),
+    width: '100px',
+    height: '50px',
+    border: '1px solid #D5D5D5',
     margin: theme.spacing(2, 0, 2),
+    boxShadow: 'none',
+    "&:hover": {
+      boxShadow: '2px 2px 30px #C1C1C1',
+      backgroundColor: '#F3F3F3',
+    },
   },
   login2: {
-    padding: theme.spacing(1.5, 0),
+    width: '100px',
+    height: '50px',
+    border: '1px solid #D5D5D5',
     margin: theme.spacing(2, 0, 2),
-    color: 'white',
-    background: '#0D88F0',
+    boxShadow: 'none',
+    "&:hover": {
+      boxShadow: '2px 2px 30px #C1C1C1',
+      backgroundColor: '#F3F3F3',
+    },
+  },
+  login3: {
+    width: '100px',
+    height: '50px',
+    border: '1px solid #D5D5D5',
+    margin: theme.spacing(2, 0, 0),
+    boxShadow: 'none',
+    "&:hover": {
+      boxShadow: '2px 2px 30px #C1C1C1',
+      backgroundColor: '#F3F3F3',
+    },
   },
   gIcon: {
-    width: '20px',
+    width: '25px',
+  },
+  fIcon: {
+    width: '40px',
+  },
+  inIcon: {
+    width: '30px',
   },
   signupLink: {
-    color: "#0E4B7A",
+    color: "#252834",
     textDecoration: 'none',
     "&:hover": {
+      color: "#13B493",
       textDecoration: 'underline',
     }
   },
   forgotPass: {
-    color: "#0E4B7A",
+    color: "#252834",
     textDecoration: 'none',
     "&:hover": {
+      color: "#13B493",
       textDecoration: 'underline',
     }
   },

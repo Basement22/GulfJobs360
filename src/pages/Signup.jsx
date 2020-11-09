@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         boxShadow: 'none',
         height: '100%',
-        backgroundImage: "linear-gradient(45deg, #0e4b7a75, #0e4b7a75, #17cca267, #17cca267, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF)",
+        backgroundImage: "linear-gradient(45deg, #3d3d3d8e, #3d3d3d8e, #17cca267, #17cca267, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF)",
 
     },
     leftpaper: {
@@ -70,7 +70,7 @@ export default function Login() {
             <Grid container spacing={0}>
                 <Grid item xs={12} sm={7}>
                     <Paper className={classes.leftpaper}>
-                        <AuthScreenBanner tagLine="Welcome back!" type="Sign In" />
+                        <AuthScreenBanner tagLine="Welcome!" type="Sign up" />
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={5}>

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 import CodeIcon from "@material-ui/icons/Code";
 import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
 import BubbleChartOutlinedIcon from "@material-ui/icons/BubbleChartOutlined";
@@ -21,8 +22,48 @@ const useStyles = makeStyles((theme) => ({
   paper1: {
     paddingTop: "3vh",
     textAlign: "center",
+    marginTop: '30px',
+    // display: 'flex',
+    // alignItems: 'center',
+    // align: 'center',
+    // justify: 'center',
+    // justifyItems: 'center',
+    // width: '100vw',
+    // backgroundColor: 'skyblue',
     color: theme.palette.text.secondary
   },
+  btnContainer: {
+    width: '340px',
+    height: '60px',
+    backgroundColor: '#333333',
+    color: 'white',
+    marginLeft: '29vw',
+    paddingTop: '10px',
+    paddingLeft: '10px',
+    marginBottom: '25px',
+    boxSizing: 'border-box',
+    borderRadius: '8px',
+  },
+  btnFeatured: {
+    width: '150px',
+    padding: theme.spacing(1),
+    boxShadow: 'none',
+    color: 'white',
+    background: 'transparent',
+  },
+  btnRecent: {
+    width: '150px',
+    boxShadow: 'none',
+    padding: theme.spacing(1),
+    background: 'white',
+  },
+  // paper: {
+  //   marginTop: theme.spacing(0),
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   backgroundColor: 'transparent',
+  //   alignItems: 'center',
+  // },
   heading: {
     fontSize: "32px",
     marginBottom: '50px',
@@ -61,95 +102,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
-  // heading: {
-  //   fontSize: "40px",
-  //   marginTop: "4vh",
-  //   fontWeight: "600",
-  //   color: "#075A5D"
-  // },
-  // text: {
-  //   color: "#2F2F2F",
-  //   fontSize: "22px",
-  //   marginTop: "50px",
-  //   marginBottom: "100px"
-  // },
-  // cardsgrid: {
-  //   // marginRight: '10vw',
-  //   // marginLeft: '10vw',
-  //   marginBottom: '180px',
-  // },
-  // paper2: {
-  //   width: 250,
-  //   height: 325,
-  //   paddingBottom: '10px',
-  //   boxShadow: "2px 2px 30px #BEBEBE",
-  //   [theme.breakpoints.down("750")]: {
-  //     width: '70vw',
-  //     height: 'auto'
-  //   },
-  //   borderRadius: "8px",
-  //   paddingTop: "10px",
-  // },
-  // code: {
-  //   marginLeft: "15px",
-  //   width: "60px",
-  //   height: "60px",
-  //   color: "#17CCA3"
-  // },
-  // file: {
-  //   marginLeft: "15px",
-  //   width: "40px",
-  //   height: "55px",
-  //   color: "#17CCA3"
-  // },
-  // chart: {
-  //   marginLeft: "15px",
-  //   width: "45px",
-  //   height: "55px",
-  //   color: "#17CCA3"
-  // },
-  // title: {
-  //   color: "#0E4B7A",
-  //   fontSize: '26px',
-  //   marginLeft: "20px",
-  //   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-  // },
-  // body: {
-  //   color: "grey",
-  //   marginLeft: "20px",
-  //   marginRight: '20px',
-  //   marginBottom: '30px',
-  //   marginTop: '5px',
-  //   fontWeight: '200',
-  //   fontSize: '18px',
-  //   background: 'transparent',
-  //   fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-  // },
-  // paper3: {
-  //   width: 250,
-  //   height: 325,
-  //   paddingBottom: '10px',
-  //   [theme.breakpoints.down("750")]: {
-  //     width: '70vw',
-  //     height: 'auto'
-  //   },
-  //   paddingTop: "10px",
-  //   borderRadius: "8px",
-  //   boxShadow: "2px 2px 30px #BEBEBE",
-  // },
-  // paper4: {
-  //   width: 250,
-  //   height: 325,
-
-  //   paddingBottom: '10px',
-  //   [theme.breakpoints.down("750")]: {
-  //     width: '70vw',
-  //     height: 'auto'
-  //   },
-  //   paddingTop: "10px",
-  //   borderRadius: "8px",
-  //   boxShadow: "2px 2px 30px #BEBEBE",
-  // }
 }));
 
 export default function FourthBox() {
@@ -158,11 +110,34 @@ export default function FourthBox() {
   return (
     <div className={classes.root}>
       <Grid container spacing={1} className={classes.main} >
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <div className={classes.paper1}>
-            <Typography component="h1" variant="h2" className={classes.heading} >
-              Recent Jobs
-            </Typography>
+            <Grid container item className={classes.btnContainer} >
+              <Grid item xs={4} >
+                <div className={classes.paper} style={{ textAlign: 'center', boxShadow: 'none' }}>
+                  <Button
+                    type="button"
+                    fullWidth
+                    variant="contained"
+                    className={classes.btnFeatured}
+                  >
+                    Featured Jobs
+                  </Button>
+                </div>
+              </Grid>
+              <Grid item xs={4} >
+                <div className={classes.paper} style={{ textAlign: 'center', boxShadow: 'none', marginLeft: '60px' }}>
+                  <Button
+                    type="button"
+                    fullWidth
+                    variant="contained"
+                    className={classes.btnRecent}
+                  >
+                    Recent Jobs
+                  </Button>
+                </div>
+              </Grid>
+            </Grid>
           </div>
         </Grid>
         <Grid container item xs={12} spacing={0} className={classes.jobcards} >
@@ -199,9 +174,6 @@ export default function FourthBox() {
               </Grid>
             </Grid>
           </Grid>
-          {/* <Grid item xs={2} style={{width: '20px'}}>
-
-          </Grid> */}
           <Grid item xs={5} className={classes.card} >
             <Grid container spacing={2}>
               <Grid item>

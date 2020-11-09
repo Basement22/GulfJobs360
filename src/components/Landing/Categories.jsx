@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         paddingTop: '60px',
-        backgroundImage: "linear-gradient(#DFFFFA, #FFFFFF, #FFFFFF, #FFFFFF, #EDF3F3)",
+        backgroundImage: "linear-gradient(#FFFFFF, #FFFFFF, #FFFFFF, #EDF3F3)",
         paddingBottom: '80px',
     },
     paper1: {
@@ -145,20 +145,27 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat2})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
-
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Education Training
-                                </Typography>
+                                    </Typography>
                                     <Typography component="h3" variant="h3" className={classes.body}>
                                         4 Open Positions
-                                </Typography>
+                                    </Typography>
                                 </div>
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat3})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Accounting / Finance
@@ -171,7 +178,11 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat4})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -186,7 +197,11 @@ export default function FourthBox() {
                     </Grid>
                     <Grid container item xs={12} spacing={0}>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat5})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -199,7 +214,11 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat6})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Resturant / Food Services
@@ -211,7 +230,11 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat7})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
 
                                     <Typography component="h3" variant="h3" className={classes.title}>
@@ -224,7 +247,11 @@ export default function FourthBox() {
                             </div>
                         </Grid>
                         <Grid item xs={3}>
-                            <div className={classes.cat}>
+                            <div className={classes.cat} style={{
+                                backgroundRepeat: 'no-repeat',
+                                backgroundImage: `url(${assets.bgcat8})`,
+                                backgroundSize: 'cover',
+                            }} >
                                 <div className={classes.wrap}>
                                     <Typography component="h3" variant="h3" className={classes.title}>
                                         Health
