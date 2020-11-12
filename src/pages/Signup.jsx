@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     login: {
         flexGrow: 1,
         boxShadow: 'none',
+        overflowY: 'hidden',
         height: '100%',
         backgroundImage: "linear-gradient(45deg, #3d3d3d8e, #3d3d3d8e, #17cca267, #17cca267, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #EDF3F3, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF)",
 

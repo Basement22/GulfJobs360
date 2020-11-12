@@ -6,28 +6,28 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
 import { green } from "@material-ui/core/colors";
 
-import { assets } from '../../theme'
+import { assets } from '../../../theme'
 
-import GoogleButton from "../Common/GoogleButton";
+// import GoogleButton from "../Common/GoogleButton";
 
 export default function SignIn(props) {
     const classes = useStyles();
 
     return (
-        <Container component="main" maxWidth="xs" >
+        <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <div className={classes.paper} style={{overflow: 'hidden'}} >
-                <form className={classes.form} noValidate style={{overflow: 'hidden'}} >
+            <div className={classes.paper}>
+                <form className={classes.form} noValidate>
                     <Grid container style={{ marginTop: '0px' }} >
                         <Grid item xs={5}  >
                             <TextField
@@ -81,27 +81,25 @@ export default function SignIn(props) {
                             type="password"
                             autoComplete="password"
                         />
-
-
                     </Grid>
                     <Grid container style={{ textAlign: 'right' }}>
                         <FormControlLabel
                             style={{ marginTop: '8px' }}
-                            control={<Checkbox value="remember" color="secondary" />}
+                            control={<Checkbox value="remember" color="primary" />}
                             label="I agree to the Privacy and Terms"
                         />
                     </Grid>
-                    <Grid container style={{ textAlign: 'right', float: 'left' }}>
+                    <Grid container style={{ textAlign: 'right' }}>
                         <RadioGroup aria-label="gender" name="gender1">
-                            <Grid item xs style={{ marginTop: '0px', float: 'left' }}>
+                            <FormControlLabel
+                                style={{ marginTop: '8px' }}
+                                control={<Radio value="fresher" color="primary" />}
+                                label="I am a fresher"
+                            />
+                            <Grid item xs style={{ marginTop: '7px' }}>
                                 <FormControlLabel
-                                    style={{ marginTop: '0px', float: 'left' }}
-                                    control={<Radio value="fresher" color="secondary" />}
-                                    label="I am a fresher"
-                                />
-                                <FormControlLabel
-                                    style={{ marginTop: '-40px', float: 'right' }}
-                                    control={<Radio value="work" color="secondary" />}
+                                    style={{ marginTop: '0px' }}
+                                    control={<Radio value="work" color="primary" />}
                                     label="I have work experience"
                                 />
                             </Grid>
@@ -121,7 +119,7 @@ export default function SignIn(props) {
                         </Button>
                     </div>
                     <Grid item xs={12} style={{ marginTop: "0px", marginBottom: '0px' }}>
-                        <Paper className={classes.paper} style={{ textAlign: 'center', marginTop: '2px', marginBottom: '0px', boxShadow: 'none' }}>
+                        <Paper className={classes.paper} style={{ textAlign: 'center', marginTop: '2px', marginBottom: '5px', boxShadow: 'none' }}>
                             <Typography component="h1" variant="subtitle1">
                                 OR
                             </Typography>
@@ -165,11 +163,11 @@ export default function SignIn(props) {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Grid item style={{ textAlign: 'right', position: 'absolute', top: '4vh', right: '8vw' }} >
+                    {/* <Grid item style={{ textAlign: 'right', position: 'absolute', top: '125vh' }} >
                         <Link to="/login" className={classes.loginLink} >
                             {"Already have an account? Log In"}
                         </Link>
-                    </Grid>
+                    </Grid> */}
                 </form>
             </div>
         </Container>
