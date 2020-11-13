@@ -157,6 +157,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'transparent',
+        textAlign: 'left',
         alignItems: 'center',
     },
     wrapper: {

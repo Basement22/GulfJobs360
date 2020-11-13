@@ -1,27 +1,3 @@
-// import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
-
-
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         display: "flex",
-//         overflowX: 'hidden',
-//         overflowY: 'hidden',
-//         flexDirection: 'column',
-//     },
-// }));
-
-// export default function PersistentDrawerRight() {
-//     const classes = useStyles();
-
-//     return (
-//         <div className={classes.root}>
-//             <>
-//         </div>
-//     );
-// }
-
 import React from 'react';
 import { Link } from 'react-router-dom'
 
@@ -50,6 +26,7 @@ import Personal from './Personal'
 import Education from './Education'
 import Footer from '../../Landing/Footer'
 import Main from '../../ProfileSetup/Main'
+import {assets} from '../../../theme'
 
 const QontoConnector = withStyles({
     alternativeLabel: {
@@ -213,7 +190,12 @@ ColorlibStepIcon.propTypes = {
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        backgroundColor: 'white',
+    },
+    main: {
+        backgroundImage: `url(${assets.bgsignup})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundColor: '#252834',
     },
     button: {
         marginRight: theme.spacing(1),
@@ -221,6 +203,7 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         padding: theme.spacing(1.5, 0),
         color: 'white',
+        marginLeft: '3vw',
         margin: theme.spacing(2, 0, 2),
     },
     box: {
@@ -229,8 +212,8 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '60px',
         paddingBottom: '60px',
         backgroundColor: '#EDF3F3',
-        borderRadius: '10px',
-        boxShadow: '4px 4px 40px #EDF3F3',
+        borderRadius: '6px',
+        boxShadow: '4px 4px 40px #252834',
     },
 }));
 
@@ -271,9 +254,9 @@ export default function CustomizedSteppers() {
     };
 
     return (
-        <div className={classes.root} style={{ marginTop: '70px', backgroundColor: 'white' }} >
+        <div className={classes.root} style={{ marginTop: '70px' }} >
             <AppBar />
-            <div style={{ paddingTop: '60px', paddingBottom: '60px', paddingLeft: '11vw', paddingRight: '11vw', backgroundColor: 'white' }} >
+            <div className={classes.main} style={{ paddingTop: '60px', paddingBottom: '60px', paddingLeft: '11vw', paddingRight: '11vw' }} >
                 {activeStep === steps.length ? (
                     <div style={{ textAlign: 'center' }} >
                         <div className={classes.box}>
@@ -294,14 +277,15 @@ export default function CustomizedSteppers() {
                                     ))}
                                 </Stepper>
                                 {getStepContent(activeStep)}
-                                <div style={{ display: 'flex', marginTop: '60px', paddingLeft: '25vw', paddingRight: '25vw', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
-                                    <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+                                <div style={{ display: 'flex', marginTop: '60px', paddingLeft: '24.5vw', paddingRight: '27vw', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
+                                    {/* <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
                                         Previous
-                                </Button>
+                                </Button> */}
                                     <Button
                                         variant="contained"
                                         color="secondary"
                                         fullWidth
+                                        style={{width: '40vw'}}
                                         onClick={handleNext}
                                         className={classes.submit}
                                     >

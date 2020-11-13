@@ -45,21 +45,6 @@ export default function FullWidthGrid() {
         <div className={classes.root}>
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper} style={{ textAlign: 'left', marginLeft: '73px', marginTop: '20px' }}>
-                        <Typography component="h1" className={classes.signin} variant="h1">
-                            Sign up
-                        </Typography>
-                        <Typography
-                            component="h6"
-                            variant="h6"
-                            className={classes.body}
-                        >
-                            Lorem Ipsum is simply dummy text of the <br/>
-                            printing and typesetting industry.
-                    </Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xs={12}>
                     <Paper className={classes.paper} style={{ paddingTop: '0px' }}>
                         <SignupForm />
                     </Paper>

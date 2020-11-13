@@ -105,7 +105,7 @@ export default function SignIn(props) {
                             </Grid>
                         </RadioGroup>
                     </Grid>
-                    <div className={classes.wrapper}>
+                    {/* <div className={classes.wrapper}>
                         <Button
                             type="button"
                             fullWidth
@@ -117,7 +117,7 @@ export default function SignIn(props) {
                         >
                             Sign up
                         </Button>
-                    </div>
+                    </div> */}
                     <Grid item xs={12} style={{ marginTop: "0px", marginBottom: '0px' }}>
                         <Paper className={classes.paper} style={{ textAlign: 'center', marginTop: '2px', marginBottom: '5px', boxShadow: 'none' }}>
                             <Typography component="h1" variant="subtitle1">
@@ -178,6 +178,7 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         marginTop: theme.spacing(0),
         display: 'flex',
+        textAlign: 'left',
         flexDirection: 'column',
         backgroundColor: 'transparent',
         alignItems: 'center',

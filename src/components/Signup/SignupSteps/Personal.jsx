@@ -74,7 +74,6 @@ export default function Experience(props) {
                             select
                             fullWidth
                             label="What is your Nationality?"
-                        // helperText="Please select your currency"
                         >
                             {currencies.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
@@ -159,6 +158,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         backgroundColor: 'transparent',
         alignItems: 'center',
+        textAlign: 'left',
     },
     wrapper: {
         margin: theme.spacing(0),

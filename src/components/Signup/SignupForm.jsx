@@ -26,8 +26,19 @@ export default function SignIn(props) {
     return (
         <Container component="main" maxWidth="xs" >
             <CssBaseline />
-            <div className={classes.paper} style={{overflow: 'hidden'}} >
-                <form className={classes.form} noValidate style={{overflow: 'hidden'}} >
+            <div className={classes.paper} >
+                <Typography component="h1" className={classes.signin} variant="h1">
+                    Sign up
+                </Typography>
+                <Typography
+                    component="h6"
+                    variant="h6"
+                    className={classes.body}
+                >
+                    Lorem Ipsum is simply dummy text of the <br />
+                    printing and typesetting industry.
+                </Typography>
+                <form className={classes.form} noValidate >
                     <Grid container style={{ marginTop: '0px' }} >
                         <Grid item xs={5}  >
                             <TextField
@@ -165,7 +176,7 @@ export default function SignIn(props) {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Grid item style={{ textAlign: 'right', position: 'absolute', top: '4vh', right: '8vw' }} >
+                    <Grid item style={{ textAlign: 'right', position: 'absolute', top: '4vh', right: '11vw' }} >
                         <Link to="/login" className={classes.loginLink} >
                             {"Already have an account? Log In"}
                         </Link>
@@ -182,11 +193,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'transparent',
-        alignItems: 'center',
+        // alignItems: 'center',
     },
     wrapper: {
         margin: theme.spacing(0),
         position: 'relative',
+    },
+    submit: {
+        padding: theme.spacing(1.5, 0),
+        color: 'white',
+        margin: theme.spacing(2, 0, 2),
     },
     buttonProgress: {
         color: green[500],
@@ -199,11 +215,6 @@ const useStyles = makeStyles((theme) => ({
     form: {
         width: '90%',
         marginTop: theme.spacing(1),
-    },
-    submit: {
-        padding: theme.spacing(1.5, 0),
-        color: 'white',
-        margin: theme.spacing(2, 0, 2),
     },
     login1: {
         width: '100px',
@@ -263,4 +274,19 @@ const useStyles = makeStyles((theme) => ({
             textDecoration: 'underline',
         }
     },
+    body: {
+        color: "#ABABAB",
+        marginTop: '3px',
+        fontWeight: '200',
+        fontSize: '18px',
+        background: 'transparent',
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+    },
+    signin: {
+        [theme.breakpoints.down('xs')]: {
+            display: "none",
+        },
+        color: '#13B493',
+        marginTop: '40px',
+    }
 }));

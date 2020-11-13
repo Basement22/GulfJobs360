@@ -25,6 +25,7 @@ const assets = {
   bgcat6:'/images/bgcat6.svg',
   bgcat7:'/images/bgcat7.svg',
   bgcat8:'/images/bgcat8.svg',
+  bgsignup:'/images/bgsignup.svg',
   bgbanner:'/images/bgbanner.svg',
   new:'/images/new.png',
   createproject:'/images/createproject.png',

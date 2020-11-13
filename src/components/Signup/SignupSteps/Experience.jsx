@@ -17,14 +17,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { green } from "@material-ui/core/colors";
 
-import { InputLabel } from '@material-ui/core';
-
 export default function Experience(props) {
     const classes = useStyles();
 
-    const currencies = [
+    const [currency, setCurrency] = React.useState('EUR');
+
+    const handleChange = (event) => {
+        setCurrency(event.target.value);
+    };
+
+    const option = [
         {
-            value: 'Doctorate',
+            value: 'asdlsajld',
             label: 'Doctorate',
         },
         {
@@ -49,12 +53,12 @@ export default function Experience(props) {
                         <TextField
                             id="standard-select-currency"
                             select
-                            style={{width: 150}}
+                            style={{ width: 150 }}
+                            // value={currency}
+                            // onChange={handleChange}
                             label="Select Years"
-
-                        // helperText="Please select your currency"
                         >
-                            {currencies.map((option) => (
+                            {option.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>
@@ -63,13 +67,16 @@ export default function Experience(props) {
                         <TextField
                             id="standard-select-currency"
                             select
-                            style={{width: 150, marginLeft: '70px'}}
+                            // margin="normal"
+                            color='primary'
+                            required
+                            style={{ width: 150, marginLeft: '70px' }}
                             label="Select Month"
-
+                        // style={{textAlign: 'right'}}
                         // helperText="Please select your currency"
                         >
-                            {currencies.map((option) => (
-                                <MenuItem key={option.value} value={option.value}>
+                            {option.map((option) => (
+                                <MenuItem key={option.value} style={{ textAlign: 'left' }} value={option.value}>
                                     {option.label}
                                 </MenuItem>
                             ))}
@@ -119,7 +126,7 @@ export default function Experience(props) {
                             label="Industry Your Company belongs to"
                         // helperText="Please select your currency"
                         >
-                            {currencies.map((option) => (
+                            {option.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>
@@ -134,7 +141,7 @@ export default function Experience(props) {
                             label="Your Function / Department in the company"
                         // helperText="Please select your currency"
                         >
-                            {currencies.map((option) => (
+                            {option.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>
@@ -186,6 +193,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(0),
         display: 'flex',
         flexDirection: 'column',
+        textAlign: 'left',
         backgroundColor: 'transparent',
         alignItems: 'center',
     },
