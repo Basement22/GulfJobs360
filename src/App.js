@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Main from './components/Signup/SignupSteps/Main';
 import ProfileMain from './components/ProfileSetup/Main';
+import Profile from './components/Profile/Main';
 import DashboardMain from './components/Dashboard/Main';
 
 const theme = createMuiTheme({
@@ -108,6 +109,7 @@ function App() {
           <Route path="/signup" exact component={Signup}/>
           <Route path="/signup/steps" component={Main}/>
           <Route path="/user/profile_setup" exact component={ProfileMain}/>
+          <Route path="/user/profile" component={Profile}/>
           <Route path="/user_dashboard" component={DashboardMain}/>
         </Switch>
       </ThemeProvider>

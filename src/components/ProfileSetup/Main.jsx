@@ -555,7 +555,7 @@ export default function CustomizedSteppers() {
                                                 type="button"
                                                 fullWidth
                                                 component={Link}
-                                                to="/user_dashboard"
+                                                to="/user/profile"
                                                 variant="contained"
                                                 color="secondary"
                                                 style={{ color: 'white' }}
