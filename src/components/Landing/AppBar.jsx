@@ -150,7 +150,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "0px",
     backgroundColor: "none",
     textAlign: "center"
-  }
+  },
+  btnlogo: {
+    "&:hover" : {
+      backgroundColor: 'transparent'
+    }
+  },
 }));
 
 export default function Header() {
@@ -179,7 +184,8 @@ export default function Header() {
       >
         <Toolbar>
           <div className={classes.logoicon}>
-          <h1 style={{color: '#252834'}}>GulfJobs. <b style={{color: '#13B493'}}>360</b></h1>
+          {/* <h1 style={{color: '#252834'}}>GulfJobs. <b style={{color: '#13B493'}}>360</b></h1> */}
+          <Button component={Link} className={classes.btnlogo} to="/" disableRipple={true} > <img src={assets.gulfBlackLogo} style={{marginTop: '0px', cursor: 'pointer', width: '180px'}} alt="Sorry!"/> </Button>
           </div>
           <div className={classes.listmenu}>
             <List
@@ -200,7 +206,7 @@ export default function Header() {
               <ListItem
                 button
                 component={Link}
-                to="/jobs"
+                to="/user/jobs"
                 disableRipple={true}
                 className={classes.listItem}
               >
@@ -209,7 +215,7 @@ export default function Header() {
               <ListItem
                 button
                 disableRipple={true}
-                to="/employers"
+                to="/employers/signup"
                 component={Link}
                 className={classes.listItem}
               >
@@ -218,7 +224,7 @@ export default function Header() {
               <ListItem
                 button
                 disableRipple={true}
-                to="/candidates"
+                to="/user/signup"
                 component={Link}
                 className={classes.listItem}
               >
@@ -227,7 +233,7 @@ export default function Header() {
               <ListItem
                 button
                 disableRipple={true}
-                to="/pages"
+                to="/user/services"
                 component={Link}
                 className={classes.listItem}
               >

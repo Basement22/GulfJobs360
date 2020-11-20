@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         textAlign: 'left',
-        backgroundColor: '#EDF3F3',
+        borderRadius: '8px',
+        backgroundColor: 'white',
         color: theme.palette.text.secondary,
     },
     rounded: {
@@ -32,7 +33,7 @@ export default function FullWidthGrid() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <div className={classes.paper} style={{ display: 'flex', marginLeft: '-20px', direction: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                    <div className={classes.paper} style={{ display: 'flex', direction: 'column', alignItems: 'center', justifyContent: 'center' }}>
                         <Avatar variant="rounded" className={classes.rounded}>
                             <img src={assets.user} style={{ width: '100%', height: '100%' }} alt="Sorry!" />
                         </Avatar>

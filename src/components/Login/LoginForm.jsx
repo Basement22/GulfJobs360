@@ -25,6 +25,17 @@ export default function SignIn(props) {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
+        <Typography component="h1" className={classes.signin} variant="h1">
+          Log In
+        </Typography>
+        <Typography
+          component="h6"
+          variant="h6"
+          className={classes.body}
+        >
+          Lorem Ipsum is simply dummy text of the <br />
+          printing and typesetting industry.
+        </Typography>
         <form className={classes.form} noValidate>
           <Grid item xs={12}>
             <TextField
@@ -72,6 +83,8 @@ export default function SignIn(props) {
               type="button"
               fullWidth
               variant="contained"
+              component={Link}
+              to="/user/home"
               color="secondary"
               className={classes.submit}
             >
@@ -124,7 +137,7 @@ export default function SignIn(props) {
             </Grid>
           </Grid>
 
-          <Grid item style={{ textAlign: 'right', position: 'absolute', top: '93vh' }} >
+          <Grid item style={{ textAlign: 'right', position: 'absolute' }} >
             <Link to="/signup" className={classes.signupLink} >
               {"Don't have an account? Sign Up"}
             </Link>
@@ -141,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: 'transparent',
-    alignItems: 'center',
+    marginTop: '2vh',
   },
   wrapper: {
     margin: theme.spacing(0),
@@ -222,4 +235,19 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'underline',
     }
   },
+  body: {
+    color: "#ABABAB",
+    marginTop: '3px',
+    fontWeight: '200',
+    fontSize: '18px',
+    background: 'transparent',
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+  },
+  signin: {
+    [theme.breakpoints.down('xs')]: {
+      display: "none",
+    },
+    color: '#13B493',
+    marginTop: '40px',
+  }
 }));

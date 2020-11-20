@@ -240,7 +240,7 @@ const useStyles = makeStyles((theme) => ({
     //     marginLeft: -12,
     // },
     form: {
-        width: '90%',
+        width: '100%',
         marginTop: theme.spacing(1),
     },
     submit: {

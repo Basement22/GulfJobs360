@@ -13,13 +13,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginTop: '70px',
     paddingLeft: '8vw',
-    backgroundColor: '#DFFFFA',
+    backgroundImage: "linear-gradient(135deg, #84F5C5, #20EDD7, #F9F9F9, #04F58F)",
     paddingRight: '8vw',
   },
   paper: {
     textAlign: 'left',
     color: theme.palette.text.secondary,
-    backgroundColor: '#EDF3F3',
+    backgroundColor: 'white',
+    border: '1px solid #D7D7D7',
     boxShadow: '2px 2px 30px #DFDFDF',
     borderRadius: '8px',
     marginTop: '20px',
@@ -39,7 +40,7 @@ export default function FullWidthGrid() {
           </div>
         </Grid>
         <Grid item xs={6} sm={6}>
-          <div className={classes.paper} style={{backgroundColor: 'transparent', boxShadow: 'none'}} >
+          <div className={classes.paper} style={{border: 'none',backgroundColor: 'transparent', boxShadow: 'none'}} >
             <ProfileDetail />
           </div>
         </Grid>

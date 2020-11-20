@@ -13,8 +13,11 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'left',
+    borderRadius: '8px',
     marginBottom: '20px',
-    backgroundColor: '#EDF3F3',
+    paddingBottom: '40px',
+    border: '1px solid #D7D7D7',
+    backgroundColor: 'white',
     boxShadow: '2px 2px 30px #DFDFDF',
     color: theme.palette.text.secondary,
   },

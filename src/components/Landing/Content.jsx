@@ -9,7 +9,7 @@ import Stats from '../Landing/Stats';
 import Banner from '../Landing/Banner';
 import Categories from '../Landing/Categories';
 import FourthBox from '../Landing/FourthBox'
-
+import FeaturedCandidates from '../Landing/FeaturedCandidates'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,6 +31,7 @@ export default function PersistentDrawerRight() {
             <Categories />
             <SecondBox />
             <ThirdBox />
+            <FeaturedCandidates />
             <Banner />
             <Stats />
         </div>

@@ -15,7 +15,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ClearIcon from "@material-ui/icons/Clear";
 
-// import Logo from '../common/Logo'
+import {assets} from '../../../theme'
 
 const drawerWidth = "100vw";
 
@@ -47,23 +47,28 @@ const useStyles = makeStyles((theme) => ({
       height: '47px',
     },
   },
+  btnlogo: {
+    "&:hover": {
+      backgroundColor: 'transparent'
+    }
+  },
 }));
 
 export default function Header() {
   const classes = useStyles();
 
-//   const [open, setOpen] = React.useState(false);
-//   const [close, setClose] = React.useState(false);
+  //   const [open, setOpen] = React.useState(false);
+  //   const [close, setClose] = React.useState(false);
 
-//   const handleDrawerOpen = () => {
-//     setOpen(true);
-//     setClose(true);
-//   };
+  //   const handleDrawerOpen = () => {
+  //     setOpen(true);
+  //     setClose(true);
+  //   };
 
-//   const handleDrawerClose = () => {
-//     setOpen(false);
-//     setClose(false);
-//   };
+  //   const handleDrawerClose = () => {
+  //     setOpen(false);
+  //     setClose(false);
+  //   };
 
   return (
     <div className={classes.root}>
@@ -73,7 +78,7 @@ export default function Header() {
       >
         <Toolbar>
           <div className={classes.logoicon}>
-          <h1 style={{color: '#252834'}}>GulfJobs. <b style={{color: '#13B493'}}>360</b></h1>
+            <Button component={Link} className={classes.btnlogo} to="/" disableRipple={true} > <img src={assets.gulfBlackLogo} style={{ marginTop: '0px', cursor: 'pointer', width: '180px' }} alt="Sorry!" /> </Button>
           </div>
         </Toolbar>
       </AppBar>

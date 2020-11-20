@@ -26,7 +26,7 @@ export default function SignIn(props) {
     return (
         <Container component="main" maxWidth="xs" >
             <CssBaseline />
-            <div className={classes.paper} >
+            <div className={classes.paper} style={{marginTop: '-25px'}} >
                 <Typography component="h1" className={classes.signin} variant="h1">
                     Sign up
                 </Typography>
@@ -176,7 +176,7 @@ export default function SignIn(props) {
                             </Paper>
                         </Grid>
                     </Grid>
-                    <Grid item style={{ textAlign: 'right', position: 'absolute', top: '4vh', right: '11vw' }} >
+                    <Grid item style={{ textAlign: 'left' }} >
                         <Link to="/login" className={classes.loginLink} >
                             {"Already have an account? Log In"}
                         </Link>
@@ -193,7 +193,6 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'transparent',
-        // alignItems: 'center',
     },
     wrapper: {
         margin: theme.spacing(0),

@@ -125,6 +125,11 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'initial',
         color: 'white',
     },
+    btnlogo: {
+        "&:hover": {
+            backgroundColor: 'transparent'
+        }
+    },
     dropdown: {
         textTransform: 'initial',
         backgroundColor: '#E3E3E3',
@@ -223,7 +228,7 @@ export default function Header() {
             >
                 <Toolbar>
                     <div className={classes.logoicon}>
-                        <h1 style={{ color: '#252834' }}>GulfJobs. <b style={{ color: '#13B493' }}>360</b></h1>
+                        <Button component={Link} className={classes.btnlogo} to="/" disableRipple={true} > <img src={assets.gulfBlackLogo} style={{ marginTop: '0px', cursor: 'pointer', width: '180px' }} alt="Sorry!" /> </Button>
                     </div>
                     <div className={classes.listmenu}>
                         <List
@@ -235,7 +240,7 @@ export default function Header() {
                                 button
                                 component={Link}
                                 disableRipple={true}
-                                to="/user/dashboard"
+                                to="/user/home"
                                 style={{ marginLeft: "0px" }}
                                 className={classes.listItem}
                             >
@@ -244,7 +249,7 @@ export default function Header() {
                             <ListItem
                                 button
                                 component={Link}
-                                to="/jobs"
+                                to="/user/jobs"
                                 disableRipple={true}
                                 className={classes.listItem}
                             >
@@ -253,7 +258,7 @@ export default function Header() {
                             <ListItem
                                 button
                                 disableRipple={true}
-                                to="/services"
+                                to="/user/services"
                                 component={Link}
                                 className={classes.listItem}
                             >
@@ -262,7 +267,7 @@ export default function Header() {
                             <ListItem
                                 button
                                 disableRipple={true}
-                                to="/career_tips"
+                                to="/user/career_tips"
                                 style={{ marginLeft: '15px' }}
                                 component={Link}
                                 className={classes.listItem}
@@ -283,7 +288,7 @@ export default function Header() {
                         John Doe
                         <ArrowDropDownRoundedIcon style={{ fontSize: '40px', marginTop: '-5px' }} />
                     </Button>
-                    <Popper open={dropDown} anchorEl={anchorRef.current} style={{backgroundColor: '#EDF3F3', color: '#343434', marginTop: '11px', borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px', width: '160px'}} role={undefined} transition disablePortal>
+                    <Popper open={dropDown} anchorEl={anchorRef.current} style={{ backgroundColor: '#EDF3F3', color: '#343434', marginTop: '11px', borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px', width: '160px' }} role={undefined} transition disablePortal>
                         {({ TransitionProps, placement }) => (
                             <Grow
                                 {...TransitionProps}
@@ -292,10 +297,10 @@ export default function Header() {
                                 <div>
                                     <ClickAwayListener onClickAway={handleClose}>
                                         <MenuList autoFocusItem={dropDown} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                                            <MenuItem component={Link} to="/user/profile" onClick={handleClose}>Profile</MenuItem>
                                             <MenuItem onClick={handleClose}>My account</MenuItem>
                                             <MenuItem onClick={handleClose}>Settings</MenuItem>
-                                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                                            <MenuItem component={Link} to="/" onClick={handleClose}>Logout</MenuItem>
                                         </MenuList>
                                     </ClickAwayListener>
                                 </div>

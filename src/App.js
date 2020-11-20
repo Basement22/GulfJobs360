@@ -3,13 +3,30 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
-import Home from './pages/Home';
+import Landing from './pages/Landing';
+import Home from './components/Home/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Main from './components/Signup/SignupSteps/Main';
 import ProfileMain from './components/ProfileSetup/Main';
 import Profile from './components/Profile/Main';
 import DashboardMain from './components/Dashboard/Main';
+import OfferMain from './components/Offers/Main';
+import Blogs from './components/CareerTips/Blogs';
+import Contact from './components/StaticPages/Contact';
+import FAQ from './components/Offers/FAQ';
+import About from './components/Offers/About';
+import EmpSignup from './pages/EmpSignup';
+import EmpLogin from './pages/EmpLogin';
+import EmpHome from './pages/EmpHome';
+import EmpProfile from './pages/EmpProfile';
+import Jobs from './pages/Jobs';
+import AllJobs from './pages/AllJobs';
+import EmpServices from './pages/EmpServices';
+import CareerTips from './pages/CareerTips';
+import PostJobs from './pages/PostJobs';
+import AccountVerify from './pages/AccountVerify';
+import EmpProfileSetup from './pages/EmpProfileSetup';
 
 const theme = createMuiTheme({
   palette: {
@@ -52,19 +69,19 @@ const theme = createMuiTheme({
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '22px',
       fontWeight: '500',
-      color: '#075A5D',
+      color: '#404040',
     },
     h5: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '18px',
       fontWeight: '500',
-      color: '#075A5D',
+      color: '#404040',
     },
     h6: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      fontSize: '16px',
+      fontSize: '18px',
       fontWeight: '500',
-      color: '#FFFFFF',
+      color: '#4C4C4C',
     },
     title1: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -81,7 +98,7 @@ const theme = createMuiTheme({
     subtitle1: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontSize: '16px',
-      color: '#9F9F9F',
+      color: '#404040',
     },
     subtitle2: {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -104,13 +121,30 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <Switch>
-          <Route path="/" exact component={Home}/>
+          <Route path="/" exact component={Landing}/>
           <Route path="/login" component={Login}/>
           <Route path="/signup" exact component={Signup}/>
           <Route path="/signup/steps" component={Main}/>
           <Route path="/user/profile_setup" exact component={ProfileMain}/>
           <Route path="/user/profile" component={Profile}/>
-          <Route path="/user_dashboard" component={DashboardMain}/>
+          <Route path="/user/home" component={Home}/>
+          <Route path="/user/services" exact component={OfferMain}/>
+          <Route path="/user/services/contact_us" component={Contact}/>
+          <Route path="/user/services/about_us" component={About}/>
+          <Route path="/user/jobs" exact component={Jobs}/>
+          <Route path="/user/jobs/all_jobs" component={AllJobs}/>
+          <Route path="/user/career_tips" exact component={CareerTips}/>
+          <Route path="/user/career_tips/blogs" component={Blogs}/>
+          <Route path="/user/services/faqs" component={FAQ}/>
+          <Route path="/employers/signup" component={EmpSignup}/>
+          <Route path="/employers/account_verfication" component={AccountVerify}/>
+          <Route path="/employers/login" component={EmpLogin}/>
+          <Route path="/employers/home" exact component={EmpHome}/>
+          <Route path="/employers/services" component={EmpServices}/>
+          <Route path="/employers/tips" component={CareerTips}/>
+          <Route path="/employers/profile" component={EmpProfile}/>
+          <Route path="/employers/profile_setup" component={EmpProfileSetup}/>
+          <Route path="/employers/post_jobs" component={PostJobs}/>
         </Switch>
       </ThemeProvider>
     </Router>

@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import FindInPageIcon from '@material-ui/icons/FindInPageOutlined';
@@ -8,8 +10,8 @@ import ContactMailIcon from '@material-ui/icons/ContactMailOutlined';
 import StarRateRoundedIcon from '@material-ui/icons/StarRateRounded';
 import SaveOutlinedIcon from '@material-ui/icons/SaveOutlined';
 import Paper from "@material-ui/core/Paper";
-// import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
-// import BubbleChartOutlinedIcon from "@material-ui/icons/BubbleChartOutlined";
+
+import {assets} from '../../theme'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -170,6 +172,12 @@ export default function FourthBox() {
                                 Search all the open positions on the
                                 web. Get your own personalized
                                 salary estimate.
+                            </Typography>
+                            <Typography component="h1" variant="h2" className={classes.heading} >
+                                Jobs that fit your life.
+                            </Typography>
+                            <Typography component="h3" variant="h3" className={classes.text}>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, corporis sit fugiat reprehenderit minus quidem optio eligendi accusamus architecto illum..
                             </Typography>
                         </div>
                     </Grid>

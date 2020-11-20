@@ -1,0 +1,82 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import ButtonBase from '@material-ui/core/ButtonBase';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
+import { assets } from '../../theme';
+import { Button } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+        marginBottom: '20px'
+    },
+    paper: {
+        padding: theme.spacing(2),
+        margin: 'auto',
+        maxWidth: '100%',
+        paddingLeft: '2vw',
+        paddingRight: '2vw',
+    },
+    image: {
+        width: '100%',
+        height: 128,
+    },
+    img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+    },
+}));
+
+export default function FullWidthGrid() {
+    const classes = useStyles();
+
+    return (
+        <div className={classes.root}>
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <div className={classes.paper} style={{cursor: 'pointer'}} >
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} >
+                                <ButtonBase className={classes.image}>
+                                    <img className={classes.img} src={assets.new} alt="Sorry!" />
+                                </ButtonBase>
+                            </Grid>
+                            <Grid item xs={12} sm container>
+                                <Grid item xs container direction="column" spacing={2}>
+                                    <Grid item xs>
+                                        <Typography gutterBottom variant="subtitle1">
+                                            Resume SpotLight
+                                        </Typography>
+                                        <Typography variant="h6" gutterBottom>
+                                            Increase your profile visibility to recruiters / employers upto 3 times.
+                                        </Typography>
+                                        <Typography variant="body2" color="textSecondary">
+                                            Get a Featured Profile, Stand out and get noticed in recruiter eyes.
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <div style={{display: 'flex', justifyContent: 'space-between'}} >
+                                        <div >
+                                        <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                                            Subscription starts from
+                                        </Typography>
+                                        <Typography variant="body2" style={{ cursor: 'pointer', fontWeight: '600' }}>
+                                            $55 for 3 Months
+                                        </Typography>
+                                        </div>
+                                        <Button color="secondary" >Know More</Button>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </div>
+                </Grid>
+            </Grid>
+        </div>
+    );
+}

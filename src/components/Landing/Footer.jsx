@@ -1,10 +1,13 @@
 import React from "react";
+import {Link} from 'react-router-dom'
+
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Button from "@material-ui/core/Button";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import { assets } from '../../theme'
@@ -124,7 +127,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     fontWeight: '100',
     color: "#F5F5F5"
-  }
+  },
+  btnlogo: {
+    "&:hover": {
+      backgroundColor: 'transparent'
+    }
+  },
 }));
 
 export default function Footer() {
@@ -319,7 +327,7 @@ export default function Footer() {
         </Grid>
         <Grid item md={4}>
           <div className={classes.paper7}>
-            <h1 style={{ color: '#13B493', marginTop: '9px' }}>GulfJobs. <b style={{ color: '#FFFFFF' }}>360</b></h1>
+            <Button component={Link} className={classes.btnlogo} to="/" disableRipple={true} > <img src={assets.gulfLightLogo} style={{ marginTop: '0px', cursor: 'pointer', width: '180px' }} alt="Sorry!" /> </Button>
           </div>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>

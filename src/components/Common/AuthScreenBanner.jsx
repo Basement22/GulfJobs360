@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 import { assets } from '../../theme'
 
@@ -56,6 +58,12 @@ const useStyles = makeStyles((theme) => ({
             display: 'block',
         },
     },
+    btnlogo: {
+        "&:hover": {
+            backgroundColor: 'transparent'
+        },
+        marginLeft: '2.4vw',
+    },
     signin: {
         marginLeft: '6%',
         marginTop: '30px',
@@ -75,7 +83,9 @@ export default function AuthScreenBanner({ tagLine, type }) {
             <Grid container spacing={0}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
-                        <h1 style={{ color: '#252834', marginLeft: '3vw' }}>GulfJobs. <b style={{ color: '#13B493' }}>360</b></h1>
+                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+                            <Button component={Link} className={classes.btnlogo} to="/" disableRipple={true} > <img src={assets.gulfBlackLogo} style={{ marginTop: '0px', cursor: 'pointer', width: '180px' }} alt="Sorry!" /> </Button>
+                        </div>
                     </Paper>
                 </Grid>
                 <Grid item xs={12}>
